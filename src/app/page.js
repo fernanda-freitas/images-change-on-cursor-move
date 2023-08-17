@@ -37,7 +37,7 @@ export default function Home() {
   const [cursor, setCursor] = useState({ x: null, y: null });
 
   const handleMouse = (e) => {
-    setCursor({ x: e.clientX - 210, y: e.clientY - 272 });
+    setCursor({ x: e.clientX - 250, y: e.clientY - 320 });
   };
 
   return (

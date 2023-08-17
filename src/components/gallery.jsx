@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, spring } from "framer-motion";
 
 export default function Gallery({ item, cursor }) {
   return (
@@ -14,8 +14,14 @@ export default function Gallery({ item, cursor }) {
       </div>
 
       <motion.div
-        className="h-[420px] w-[544px] fixed top-0 rounded-2xl overflow-hidden"
-        style={{ left: cursor.x, top: cursor.y }}
+        className="h-[620px] w-[520px] fixed top-0 rounded-2xl overflow-hidden"
+        animate={{ x: cursor.x, y: cursor.y }}
+        transition={{
+          type: spring,
+          stiffness: 150,
+          damping: 15,
+          mass: 0.1,
+        }}
       >
         <Image
           src={`/images/${item.cursor}`}
