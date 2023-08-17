@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Lenis from "@studio-freight/lenis";
 import Gallery from "../components/gallery";
 
 export default function Home() {
@@ -12,12 +13,31 @@ export default function Home() {
       cursor: "cursor02.jpeg",
       background: "background02.jpeg",
     },
+    {
+      cursor: "cursor03.jpeg",
+      background: "background03.jpeg",
+    },
   ];
 
-  const [cursor, setCursor] = useState({ x: 0, y: 0 });
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    lenis.on("scroll", (e) => {
+      console.log(e);
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
+  const [cursor, setCursor] = useState({ x: null, y: null });
 
   const handleMouse = (e) => {
-    setCursor({ x: e.clientX, y: e.clientY });
+    setCursor({ x: e.clientX - 210, y: e.clientY - 272 });
   };
 
   return (

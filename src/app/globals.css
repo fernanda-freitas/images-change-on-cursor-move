@@ -4,4 +4,9 @@
 
 main {
   overflow-x: hidden;
+  cursor: none;
+}
+
+.clip-path {
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
 }
