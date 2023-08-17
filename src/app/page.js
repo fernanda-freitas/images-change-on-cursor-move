@@ -14,7 +14,7 @@ export default function Home() {
       background: "background02.jpeg",
     },
     {
-      cursor: "cursor03.jpg",
+      cursor: "cursor04.jpeg",
       background: "background03.jpeg",
     },
   ];
