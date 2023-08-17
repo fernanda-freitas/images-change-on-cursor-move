@@ -4,7 +4,12 @@ export default function Gallery({ item, cursor }) {
   return (
     <div className="w-100 h-screen clip-path">
       <div className="w-full h-full relative">
-        <Image src={`/images/${item.background}`} alt="image" fill />
+        <Image
+          src={`/images/${item.background}`}
+          alt="image"
+          fill
+          className="w-100 object-cover"
+        />
       </div>
 
       <div

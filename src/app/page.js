@@ -6,7 +6,7 @@ import Gallery from "../components/gallery";
 export default function Home() {
   const items = [
     {
-      cursor: "cursor01.jpeg",
+      cursor: "cursor01.jpg",
       background: "background01.jpeg",
     },
     {
@@ -14,7 +14,7 @@ export default function Home() {
       background: "background02.jpeg",
     },
     {
-      cursor: "cursor03.jpeg",
+      cursor: "cursor03.jpg",
       background: "background03.jpeg",
     },
   ];
